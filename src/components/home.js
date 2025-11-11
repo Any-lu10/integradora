@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeContext';
 
 const Home = () => {
   const [filter, setFilter] = useState('');
   const dispatch = useDispatch();
+    const { darkMode, setDarkMode } = useContext(ThemeContext);
 
 const addToCart = (product) => {
   dispatch({ type: 'ADD_TO_CART', payload: product });
@@ -21,8 +24,11 @@ const addToCart = (product) => {
   const filteredProducts = products.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()));
 
   return (
-    <div>
+    <div style={{ background: darkMode ? '#333' : 'white', color: darkMode ? 'white' : 'black', minHeight: '100vh', padding: '20px' }}>
       <h1>INTEGRADORA SHOP</h1>
+      <button onClick={() => setDarkMode(!darkMode)}>
+  {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
+</button>
       <Carousel autoPlay>
         <div><img src="https://via.placeholder.com/800x400?text=Oferta+1" alt="Oferta 1" /></div>
         <div><img src="https://via.placeholder.com/800x400?text=Oferta+2" alt="Oferta 2" /></div>
