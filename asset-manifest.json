@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/integradora/static/css/main.5b16202c.css",
+    "main.js": "/integradora/static/js/main.d3046f69.js",
+    "static/js/453.1fa88346.chunk.js": "/integradora/static/js/453.1fa88346.chunk.js",
+    "index.html": "/integradora/index.html",
+    "main.5b16202c.css.map": "/integradora/static/css/main.5b16202c.css.map",
+    "main.d3046f69.js.map": "/integradora/static/js/main.d3046f69.js.map",
+    "453.1fa88346.chunk.js.map": "/integradora/static/js/453.1fa88346.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b16202c.css",
+    "static/js/main.d3046f69.js"
+  ]
+}
