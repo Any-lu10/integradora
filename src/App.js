@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Register from './components/Register';
 import Cart from './components/Cart';
@@ -9,9 +9,9 @@ function App() {
     <Router>
       <div style={{ padding: '20px' }}>
         <nav style={{ marginBottom: '20px' }}>
-          <a href="/" style={{ marginRight: '20px' }}>Inicio</a>
-          <a href="/register" style={{ marginRight: '20px' }}>Registrarse</a>
-          <a href="/cart">Carrito</a>
+          <Link to="/" style={{ marginRight: '20px' }}>Inicio</Link>
+          <Link to="/register" style={{ marginRight: '20px' }}>Registrarse</Link>
+          <Link to="/cart">Carrito</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
